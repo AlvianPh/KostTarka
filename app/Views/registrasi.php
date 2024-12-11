@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Registrasi</title>
-    <link rel="stylesheet" href="<?= base_url('css/style_registrasi.css'); ?>" />
+    <link rel="stylesheet" href="<?= base_url('css/registrasi.css'); ?>" />
   </head>
   <body>
     <div class="form-container">
