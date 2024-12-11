@@ -4,11 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Registrasi</title>
-    <link rel="stylesheet" href="<?= base_url('css/style_registrasi.css'); ?>" />
+    <link rel="stylesheet" href="css/style_edit.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
+    <header class="header">
+      <div class="logo">
+      <img src="image/logo 1.png" alt="Kost Tarka Logo">
+      </div>
+      <nav>
+          <ul>
+              <li><a href="<?= base_url('/') ?>">Home</a></li>
+              <li><a href="<?= base_url('penghuni-kos') ?>">List Kamar</a></li>
+              <li><a href="#">Pembayaran</a></li>
+              <li><a href="#">
+                      <i class="fas fa-user-circle" style="font-size: 24px; color: white;"></i>
+              </a></li>
+          </ul>
+      </nav>
+    </header>
+
     <div class="form-container">
-      <h1>Form Registrasi</h1>
+      <h1>Informasi Akun</h1>
       <form>
         <table>
           <tr>
@@ -33,18 +50,8 @@
             /></td>
           </tr>
           <tr>
-            <td><label>Tipe Akun</label></td>
-            <td><label style="display: flex; align-items: center"
-              ><input type="radio" name="account-type" value="pemilik" required/>
-              <span style="margin-left: 5px">Pemilik</span></label></td>
-            <td><label style="display: flex; align-items: center"
-              ><input type="radio" name="account-type" value="penghuni" />
-              <span style="margin-left: 5px">Penghuni</span></label
-            ></td>
-          </tr>
-          <tr>
             <td></td>
-            <td><button type="submit" href="">Sign Up</button></td>
+            <td><button type="submit" href="#">Submit</button></td>
             <td></td>
           </tr>
       </form>

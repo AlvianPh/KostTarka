@@ -8,11 +8,59 @@ body {
   height: 100vh;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #007bff;
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 15px 30px;
+  color: white;
+}
+
+header .logo img {
+  margin-left: 10px;
+  width: 100px;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+}
+
+.header nav ul li a.active,
+.header nav ul li a:hover {
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+}
+
+i:hover {
+  background-color: #007bff;
+}
 .form-container {
   background-color: #007bff;
+  max-height: 80%;
+  height: 550px;
   width: 600px; /* Lebar background lebih besar untuk memberi kesan luas */
   max-width: 90%;
-  padding: 30px; /* Memberikan ruang tambahan */
+  padding: 25px; /* Memberikan ruang tambahan */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -24,15 +72,24 @@ h1 {
 }
 
 form {
-  width: 450px; /* Lebar form tetap */
+  width: 600px; /* Lebar form tetap */
   margin: 0 auto; /* Form tetap berada di tengah background */
   display: flex;
   flex-direction: column;
   gap: 10px; /* Memberi jarak antar elemen form */
 }
 
-.form-group {
-  margin-bottom: 15px;
+table {
+  padding: 5px;
+  margin: 10px;
+}
+
+tr {
+  height: 60px;
+}
+
+td {
+  width: 20%;
 }
 
 label {
@@ -48,7 +105,7 @@ input[type="password"] {
   width: 100%;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   box-sizing: border-box;
 }
 
@@ -77,6 +134,7 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 25px;
   transition: background-color 0.3s;
 }
 
