@@ -60,7 +60,11 @@
             <div class="cta-content">
                 <h2>Ready to Start?</h2>
                 <p>Discover the best way to manage your boarding house effortlessly. Get insights, reminders, and complete control at your fingertips!</p>
-                <a href="/get-started" class="btn-primary">Get Started</a>
+                
+                <!-- template saja,get started nya nanti ganti ke login -->
+                <a href="<?= base_url('penghuni-kos') ?>" class="btn">Get Started</a>
+
+
             </div>
             <div class="cta-image">
                 <img src="<?= base_url('images/start.png'); ?>" alt="Get Started Illustration">
@@ -92,8 +96,8 @@
             <a href="0895375150908" target="_blank" class="footer-icon">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="" target="_blank" class="footer-icon">
-                <i class="phew.zzz"></i> Instagram
+            <a href="https://www.instagram.com/phew.zzz/?hl=en" target="_blank" class="footer-icon">
+                    <i class="fab fa-instagram"></i> Instagram
             </a>
             <a href="https://github.com/AlvianPh/KostTarka.git" target="_blank" class="footer-icon">
                 <i class="fab fa-github"></i> GitHub

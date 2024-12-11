@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 30px;
+    color: white;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+.header nav ul li a.active,
+.header nav ul li a:hover {
+    background-color: white;
+    color: #007bff;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.room-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-card {
+    display: flex;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-card img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 15px;
+    flex: 1;
+}
+
+.room-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.room-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.room-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-detail,
+.btn-book {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-detail {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-book {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-detail:hover {
+    background-color: #0056b3;
+}
+
+.btn-book:hover {
+    background-color: #218838;
+}
+
+
+
+/*footer*/
+footer {
+    background-color: #007bff;
+    color: white; 
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.footer-logo img {
+    width: 100px; 
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap;
+}
+
+.footer-icon {
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+    color: #d4d4d4; 
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    padding-top: 10px;
+} 
