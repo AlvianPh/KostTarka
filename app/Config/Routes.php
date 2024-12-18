@@ -7,5 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Dashboard::index');
 $routes->get('/room', 'RoomController::index');
-$routes->get('/reset-password', 'AuthController::resetPasswordForm');
-$routes->post('/reset-password', 'AuthController::processResetPassword');
+$routes->get('/lupa-password', 'AuthController::resetPasswordForm');
+$routes->post('/lupa-password', 'AuthController::processResetPassword');
+$routes->get('/reset-password', 'PasswordResetController::index');
+$routes->post('/reset-password/process', 'PasswordResetController::process');
