@@ -24,7 +24,9 @@
             <div class="content">
             <h2>Manage Your Room and Ensure Security</h2>
             <p>Adjust Payment Settings Quickly</p>
-            <button>Manage</button>
+            <a href="<?= base_url('manajemen_kamar') ?>" class="button">Manage</a>
+
+
             </div>
         </div>
 

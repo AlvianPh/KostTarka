@@ -62,7 +62,7 @@
                 <p>Simplify Your Property with Tarka</p>
             </div>
             <div class="footer-links">
-                <a href="0895375150908" target="_blank" class="footer-icon">
+                <a href="#" target="_blank" class="footer-icon">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
                 <a href="https://www.instagram.com/phew.zzz/?hl=en" target="_blank" class="footer-icon">
