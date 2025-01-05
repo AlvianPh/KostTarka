@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+.logo {
+  width: 120px;
+  height: 40px;
+}
