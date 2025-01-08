@@ -19,28 +19,27 @@ class Kamar extends Model
                 'label' => 'nama_kamar',
                 'rules' => 'trim|required'
             ],
-                'harga' => [
-                    'label' => 'harga',
-                    'rules' => 'trim|required'
-                ],
-                'status' => [
-                    'label' => 'status',
-                    'rules' => 'trim|required'
-                ],
-                'token' => [
-                    'label' => 'token',
-                    'rules' => 'trim|required'
-                ],
-                'foto_kamar' => [
-                    'label' => 'foto_kamar',
-                    'rules' => 'trim|required'
-                ],
-                'fasilitas' => [
-                    'label' => 'fasilitas',
-                    'rules' => 'trim|required'
-                ],
+            'harga' => [
+                'label' => 'harga',
+                'rules' => 'trim|required'
+            ],
+            'status' => [
+                'label' => 'status',
+                'rules' => 'trim|required'
+            ],
+            'token' => [
+                'label' => 'token',
+                'rules' => 'trim|required'
+            ],
+            'foto_kamar' => [
+                'label' => 'foto_kamar',
+                'rules' => 'trim|required'
+            ],
+            'fasilitas' => [
+                'label' => 'fasilitas',
+                'rules' => 'trim|required'
+            ],
         ];
-        
     }
 
     public function getAll()

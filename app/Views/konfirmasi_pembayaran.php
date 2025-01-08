@@ -1,45 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konfirmasi Penghuni</title>
-    <link rel="stylesheet" href="konfirmasi_pembayaran.css">
-</head>
-<body>
+<div class="container mt-5">
+    <!-- Header -->
+    <h1 class="text-center">Konfirmasi Pembayaran</h1>
 
-    <!-- Form Konfirmasi -->
-    <div class="form-container">
-        <h1>Konfirmasi</h1>
-        <!-- Dropdown Kamar -->
-        <div class="dropdown-container">
-            <select name="kamar" id="kamar">
-                <option value="1">Kamar 1</option>
-                <option value="2">Kamar 2</option>
-                <option value="3">Kamar 3</option>
-                <option value="4">Kamar 4</option>
-            </select>
-        </div>
-        <!-- Daftar Penghuni -->
-        <div class="checkbox-container">
-            <div class="row">
-                <label><input type="checkbox"> Penghuni 1</label>
-                <label><input type="checkbox"> Penghuni 4</label>
-                <label><input type="checkbox"> Penghuni 7</label>
-            </div>
-            <div class="row">
-                <label><input type="checkbox"> Penghuni 2</label>
-                <label><input type="checkbox"> Penghuni 5</label>
-                <label><input type="checkbox"> Penghuni 8</label>
-            </div>
-            <div class="row">
-                <label><input type="checkbox"> Penghuni 3</label>
-                <label><input type="checkbox"> Penghuni 6</label>
-                <label><input type="checkbox" checked> Penghuni 9</label>
-            </div>
-        </div>
+    <!-- Notifikasi -->
+    <div class="alert alert-success mt-4 text-center" role="alert">
+        Data telah disetujui!
     </div>
 
-    
-</body>
-</html>
+    <!-- Tabel -->
+    <div class="table-responsive mt-4">
+        <table class="table table-bordered align-middle text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Kode Pembayaran</th>
+                    <th>Nama Distributor</th>
+                    <th>Total Biaya</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>PRF000001</td>
+                    <td>PT. Sumber Waras</td>
+                    <td>Rp 112.500</td>
+                    <td>
+                        <div>
+                            <span class="badge bg-success">Telah Disetujui</span>
+                        </div>
+                        <div class="mt-2">
+                            <a href="#" class="btn btn-sm btn-primary">Detail</a>
+                            <button class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin membatalkan?')">Batal</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>PRF000002</td>
+                    <td>PT. Sumber Waras</td>
+                    <td>Rp 52.000</td>
+                    <td>
+                        <div>
+                            <span class="badge bg-warning">Menunggu Persetujuan</span>
+                        </div>
+                        <div class="mt-2">
+                            <button class="btn btn-sm btn-success" onclick="return confirm('Setujui pembayaran ini?')">Setujui</button>
+                            <button class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin membatalkan?')">Batal</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

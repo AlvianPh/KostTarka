@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>List Kamar</title>
 </head>
+
 <body>
     <header class="header">
         <div class="logo">
-        <img src="<?= base_url('images/logo.png'); ?>" alt="Kost Tarka Logo">
+            <img src="<?= base_url('images/logo.png'); ?>" alt="Kost Tarka Logo">
         </div>
         <nav>
             <ul>
@@ -19,7 +21,7 @@
                 <li><a href="#">Pembayaran</a></li>
                 <li><a href="#">
                         <i class="fas fa-user-circle" style="font-size: 24px; color: white;"></i>
-                </a></li>
+                    </a></li>
             </ul>
         </nav>
     </header>
@@ -79,4 +81,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -18,24 +18,23 @@ class User extends Model
                 'label' => 'nama',
                 'rules' => 'trim|required'
             ],
-                'email' => [
-                    'label' => 'email',
-                    'rules' => 'trim|required'
-                ],
-                'password' => [
-                    'label' => 'password',
-                    'rules' => 'trim|required'
-                ],
-                'no_hp' => [
-                    'label' => 'no_hp',
-                    'rules' => 'trim|required'
-                ],
-                'role' => [
-                    'label' => 'role',
-                    'rules' => 'trim|required'
-                ]
+            'email' => [
+                'label' => 'email',
+                'rules' => 'trim|required'
+            ],
+            'password' => [
+                'label' => 'password',
+                'rules' => 'trim|required'
+            ],
+            'no_hp' => [
+                'label' => 'no_hp',
+                'rules' => 'trim|required'
+            ],
+            'role' => [
+                'label' => 'role',
+                'rules' => 'trim|required'
+            ]
         ];
-        
     }
 
     public function getAll()
