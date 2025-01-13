@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Statistik</h2>
+    <h2 class="text-center mb-4">Dashboard Pemilik Kos</h2>
 
     <!-- Bagian Statistik -->
     <div class="row justify-content-center text-center">

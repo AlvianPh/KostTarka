@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.1/dist/css/lightbox.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" integrity="sha384-dyB9MsOuB6BxD1G3AcoF9P5nnE9ZBKHZBItzjgmx2RBfYYR3IVP4pHQF0ebhktHb" crossorigin="anonymous">
     <title> </title>
     <style>
@@ -55,7 +56,7 @@
                     <a class="nav-link" href="<?=base_url('/konfirmasi_pembayaran')?>">Pembayaran</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('/laporan')?>">Laporan</a>
+                    <a class="nav-link" href="<?=base_url('/laporan_keuangan')?>">Laporan</a>
                 </li>
                 <!-- User Dropdown -->
                 <li class="nav-item dropdown">

@@ -18,7 +18,7 @@ class ManajemenKamar extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Kamar',
+            'title' => 'Manajemen Kamar',
             'dataKamar' => $this->kamar->getAll(),
             'validation' => \Config\Services::validation(),
             'showModal' => session()->getFlashdata('showModal'),

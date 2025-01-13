@@ -1,14 +1,38 @@
-<?php
-if (session()->getFlashdata('message')) : ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <?= session()->getFlashdata('message'); ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;
-            </span>
-        </button>
-    </div>;
-<?php endif;
-?>
+  <!-- Notifikasi -->
+  <?php if (session()->getFlashdata('success')): ?>
+    <div id="flash-success" class="alert alert-success mt-4 text-center" role="alert">
+        <?= session()->getFlashdata('success'); ?>
+    </div>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('error')): ?>
+    <div id="flash-error" class="alert alert-danger mt-4 text-center" role="alert">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
+
+<!-- Tambahkan JavaScript -->
+<script>
+    // Menghilangkan notifikasi setelah 5 detik
+    setTimeout(() => {
+        const flashSuccess = document.getElementById('flash-success');
+        const flashError = document.getElementById('flash-error');
+        
+        if (flashSuccess) {
+            flashSuccess.style.transition = "opacity 0.5s ease";
+            flashSuccess.style.opacity = "0";
+            setTimeout(() => flashSuccess.remove(), 500); // Menghapus elemen setelah transisi selesai
+        }
+        
+        if (flashError) {
+            flashError.style.transition = "opacity 0.5s ease";
+            flashError.style.opacity = "0";
+            setTimeout(() => flashError.remove(), 500); // Menghapus elemen setelah transisi selesai
+        }
+    }, 5000); // 5 detik
+</script>
+
+
 
 <div class="container mt-5">
     <h1><?= $title; ?></h1>

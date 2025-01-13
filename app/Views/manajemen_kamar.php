@@ -6,7 +6,7 @@
         }
 
         .card-img-top {
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
             max-height: 250px;
             object-fit: cover;
         }
@@ -28,18 +28,47 @@
         }
     </style>
 
-    <div class="container mt-3">
-        <?php if (session()->getFlashdata('message')): ?>
-            <div class="alert alert-success">
-                <?= session()->getFlashdata('message') ?>
-            </div>
-        <?php endif; ?>
+     <!-- Notifikasi -->
+<?php if (session()->getFlashdata('success')): ?>
+    <div id="flash-success" class="alert alert-success mt-4 text-center" role="alert">
+        <?= session()->getFlashdata('success'); ?>
+    </div>
+<?php endif; ?>
 
-        <h1 class="text-center mb-5">Manajemen Kamar</h1>
+<?php if (session()->getFlashdata('error')): ?>
+    <div id="flash-error" class="alert alert-danger mt-4 text-center" role="alert">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+<!-- Tambahkan JavaScript -->
+<script>
+    // Menghilangkan notifikasi setelah 5 detik
+    setTimeout(() => {
+        const flashSuccess = document.getElementById('flash-success');
+        const flashError = document.getElementById('flash-error');
+        
+        if (flashSuccess) {
+            flashSuccess.style.transition = "opacity 0.5s ease";
+            flashSuccess.style.opacity = "0";
+            setTimeout(() => flashSuccess.remove(), 500); // Menghapus elemen setelah transisi selesai
+        }
+        
+        if (flashError) {
+            flashError.style.transition = "opacity 0.5s ease";
+            flashError.style.opacity = "0";
+            setTimeout(() => flashError.remove(), 500); // Menghapus elemen setelah transisi selesai
+        }
+    }, 5000); // 5 detik
+</script>
+
+
+
+        <h1 class="text-center mb-5 mt-4" >Manajemen Kamar</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 ms-4 me-4">
             <?php
-            foreach ($dataKamar as $rosw) :
+            foreach ($dataKamar as $row) :
                 $fasilitas = explode(',', $row['fasilitas']);
             ?>
                 <div class="col">

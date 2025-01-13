@@ -6,6 +6,6 @@ class PenghuniKos extends BaseController
 {
     public function index()
     {
-        return view('penghuni_kos');
+        echo view('penghuni_kos');
     }
 }
