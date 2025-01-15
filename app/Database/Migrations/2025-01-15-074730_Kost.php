@@ -35,6 +35,11 @@ class CreateKosTables extends Migration
                 'constraint' => 255,
                 'null'       => true,
             ],
+            'id_kamar' => [
+                'type'       => 'INT',
+                'constraint' => 11,
+                'null'       => true,
+            ],
         ]);
         $this->forge->addKey('id_bukti', true);
         $this->forge->createTable('bukti');

@@ -9,7 +9,7 @@ class BuktiBayar extends Model
     protected $table = 'bukti';
     protected $primaryKey = 'id_bukti';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nama_kamar','jumlah', 'tanggal', 'status', 'nama', 'foto_bukti'];
+    protected $allowedFields = ['nama_penghuni','jumlah', 'tanggal', 'status', 'id_kamar', 'foto_bukti'];
 
 
     public function rules()
@@ -27,7 +27,7 @@ class BuktiBayar extends Model
                 'label' => 'status',
                 'rules' => 'trim|required'
             ],
-            'nama' => [
+            'nama_penghuni' => [
                 'label' => 'nama_penghuni',
                 'rules' => 'trim|required'
             ],
@@ -35,8 +35,8 @@ class BuktiBayar extends Model
                 'label' => 'foto_bukti',
                 'rules' => 'trim|required'
             ],
-            'nama_kamar' => [
-                'label' => 'nama_kamar',
+            'id_kamar' => [
+                'label' => 'id_kamar',
                 'rules' => 'trim|required'
             ],
         ];
@@ -54,10 +54,26 @@ class BuktiBayar extends Model
 
     public function getLaporan($awal, $akhir)
     {
-    return $this->where('tanggal >=', $awal)
+    return $this->select('bukti.*, kamar.*, bukti.status AS status_bukti, kamar.status AS status_kamar')
+                ->join('kamar', 'bukti.id_kamar = kamar.id_kamar')
+                ->where('tanggal >=', $awal)
                 ->where('tanggal <=', $akhir)
                 ->orderBy('tanggal', 'ASC')
                 ->findAll();
+    }
+    public function getPembayaran(){
+        return $this->select('bukti.*, kamar.*, bukti.status AS status_bukti, kamar.status AS status_kamar')
+        ->join('kamar', 'bukti.id_kamar = kamar.id_kamar')
+        ->where(['bukti.status' => 0])
+        ->orderBy('id_bukti', 'ASC')
+        ->findAll();
+    }
+    public function getPembayaranSuccess(){
+        return $this->select('bukti.*, kamar.*, bukti.status AS status_bukti, kamar.status AS status_kamar')
+        ->join('kamar', 'bukti.id_kamar = kamar.id_kamar')
+        ->where(['bukti.status' => 1])
+        ->orderBy('id_bukti', 'ASC')
+        ->findAll();
     }
 
 }

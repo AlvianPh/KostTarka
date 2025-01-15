@@ -57,8 +57,8 @@
                     <?php $no = 1; foreach ($bukti_pending as $b): ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $b['id_bukti']; ?></td>
-                            <td><?= $b['nama_penghuni'] ?? 'Tidak Diketahui'; ?></td>
+                            <td><?= $b['nama_kamar']; ?></td>
+                            <td><?= $b['nama_penghuni'] ?></td>
                             <td>Rp <?= number_format($b['jumlah'], 0, ',', '.'); ?></td>
                             <td><span class="badge bg-warning">Menunggu Persetujuan</span></td>
                             <td>
