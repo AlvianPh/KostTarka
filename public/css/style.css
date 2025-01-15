@@ -1,0 +1,339 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.features {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.features h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.feature:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite; 
+}
+
+.feature h3 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Animasi Melayang */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.cta {
+    display: flex; /* Tata letak horizontal */
+    justify-content: space-between; /* Elemen berjauhan */
+    align-items: center; /* Rata vertikal */
+    padding: 50px 20px;
+    background-color: #007bff; /* Latar belakang biru */
+    color: white; /* Teks putih */
+    border-radius: 10px; /* Sudut melengkung */
+    margin: 20px auto; /* Spasi atas dan bawah */
+    max-width: 800px; /* Lebar maksimal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
+    flex-wrap: wrap; /* Responsif */
+}
+
+.cta-content {
+    max-width: 50%; /* Batas lebar teks */
+}
+
+.cta-content h2 {
+    font-size: 36px; /* Ukuran heading */
+    margin-bottom: 10px; /* Spasi bawah */
+}
+
+.cta-content p {
+    font-size: 18px; /* Ukuran teks deskriptif */
+    line-height: 1.5; /* Jarak antar baris */
+    margin-bottom: 20px; /* Spasi bawah */
+}
+
+.cta-content .btn-primary {
+    background-color: #ffffff; /* Warna putih */
+    color: #007bff; /* Teks biru */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-content .btn-primary:hover {
+    background-color: #0056b3; /* Warna saat hover */
+    color: white;
+}
+
+.cta-image img {
+    max-width: 200px; /* Batas lebar maksimal */
+    height: auto; /* Pertahankan proporsi */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan */
+    margin: 10px auto; /* Spasi atas-bawah otomatis */
+    display: block; /* Pusatkan gambar secara vertikal */
+}
+
+
+
+.feedback {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+/*background*/
+.hero-section {
+    margin-top: 20px;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: 80% auto;
+    height: 468px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+    text-align: center; 
+    position: relative; 
+  }
+  
+  .hero-section .content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px; 
+    color: #000; 
+  }
+  
+  .hero-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px; 
+  }
+  
+  .hero-section p {
+    font-size: 16px; 
+    margin-bottom: 20px; 
+  }
+  
+  .hero-section button {
+    background-color: #007bff;
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+  }
+  
+  .hero-section button:hover {
+    background-color: #0056b3; 
+  }
+  
+  /*feedback form*/
+  .feedback {
+    padding: 50px 20px;
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px;
+    margin: 50px auto; 
+}
+
+.feedback h2 {
+    text-align: center; 
+    font-size: 28px; 
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback label {
+    font-weight: bold; 
+    color: #555;
+}
+
+.feedback input, 
+.feedback textarea {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); 
+    background-color: #fff; 
+}
+
+.feedback input:focus, 
+.feedback textarea:focus {
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); 
+}
+
+.feedback textarea {
+    height: 100px; 
+    resize: none; 
+}
+
+.feedback .btn-submit {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback .btn-submit:hover {
+    background-color: #0056b3; 
+}
+
+
+/*footer*/
+footer {
+    background-color: #007bff;
+    color: white; 
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.footer-logo img {
+    width: 100px; 
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap;
+}
+
+.footer-icon {
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+    color: #d4d4d4; 
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    padding-top: 10px;
+} 
