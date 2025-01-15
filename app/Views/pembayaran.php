@@ -35,7 +35,7 @@
                 <!-- Nama Penghuni -->
                 <div class="mb-3">
                     <label for="nama" class="form-label" style="font-weight: bold;">Nama Penghuni</label>
-                    <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Penghuni" required>
+                    <input type="text" name="nama_penghuni" id="nama" class="form-control" placeholder="Nama Penghuni" required>
                 </div>
 
                 <!-- Jumlah Pembayaran -->
