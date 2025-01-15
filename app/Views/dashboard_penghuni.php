@@ -8,8 +8,8 @@
         </div>
         <div class="card-body">
             <p><strong>Nama Kamar:</strong> <?= isset($kamar['nama_kamar']) ? $kamar['nama_kamar'] : 'Tidak tersedia'; ?></p>
-            <p><strong>Status Kamar:</strong> <?= isset($kamar['status']) ? ucfirst($kamar['status']) : 'Tidak tersedia'; ?></p>
-            <p><strong>Tanggal Masuk:</strong> <?= isset($kamar['tanggal_masuk']) ? date('d/m/Y', strtotime($kamar['tanggal_masuk'])) : 'Tidak tersedia'; ?></p>
+            <p><strong>Status Kamar:</strong> <?= isset($kamar['status_kamar']) ? ucfirst($kamar['status']) : 'Tidak tersedia'; ?></p>
+            <p><strong>Tanggal Masuk:</strong> <?= isset($sewa['tanggal_masuk']) ? date('d/m/Y', strtotime($kamar['tanggal_masuk'])) : 'Tidak tersedia'; ?></p>
         </div>
     </div>
 
@@ -47,20 +47,24 @@
     </div>
 
     <!-- Notifikasi -->
-    <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white">
-            <h5>Notifikasi</h5>
-        </div>
-        <div class="card-body">
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h5>Notifikasi</h5>
+    </div>
+    <div class="card-body">
+        <?php if (!empty($kamar)): // Cek apakah penghuni memiliki kamar ?>
             <?php if (!empty($notifikasi)): ?>
                 <ul class="list-unstyled">
                     <?php foreach ($notifikasi as $notif): ?>
-                        <li>• <?= $notif['pesan']; ?> (<?= date('d/m/Y', strtotime($notif['tanggal'])); ?>)</li>
+                        <li>• <?= esc($notif['pesan']); ?> (<?= date('d/m/Y', strtotime($notif['tanggal'])); ?>)</li>
                     <?php endforeach; ?>
                 </ul>
             <?php else: ?>
                 <p class="text-muted">Tidak ada notifikasi baru.</p>
             <?php endif; ?>
-        </div>
+        <?php else: // Jika penghuni belum memiliki kamar ?>
+            <p class="text-muted">Anda belum memiliki kamar. Tidak ada notifikasi baru.</p>
+        <?php endif; ?>
     </div>
+</div>
 </div>

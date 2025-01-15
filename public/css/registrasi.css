@@ -11,7 +11,7 @@ body {
 .form-container {
   background-color: #007bff;
   max-height: 80%;
-  height: 550px;
+  height: 100%;
   width: 600px; /* Lebar background lebih besar untuk memberi kesan luas */
   max-width: 90%;
   padding: 25px; /* Memberikan ruang tambahan */

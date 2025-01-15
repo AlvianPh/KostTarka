@@ -9,7 +9,7 @@ class Kamar extends Model
     protected $table = 'kamar';
     protected $primaryKey = 'id_kamar';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['nama_kamar', 'harga', 'status', 'token', 'foto_kamar', 'fasilitas'];
+    protected $allowedFields = ['nama_kamar', 'harga', 'status', 'token', 'foto_kamar', 'fasilitas', 'id_user'];
 
 
     public function rules()
@@ -39,6 +39,10 @@ class Kamar extends Model
                 'label' => 'fasilitas',
                 'rules' => 'trim|required'
             ],
+            'id_user' => [
+                'label' => 'id_user',
+                'rules' => 'trim|required'
+            ],
         ];
     }
 
@@ -50,5 +54,11 @@ class Kamar extends Model
     public function getById($id)
     {
         return $this->where(['id_kamar' => $id])->first();
+    }
+    public function getPenghuniKamar(){
+        return $this->select('kamar.*, users.*, users.status AS status_user, kamar.status AS status_kamar')
+        ->join('users', 'kamar.id_user = users.id')
+        ->orderBy('id_kamar', 'ASC')
+        ->findAll();
     }
 }

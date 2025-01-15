@@ -93,6 +93,27 @@ class AuthController extends Controller
             return redirect()->to(route_to('reset-password') . '?token=' . $this->auth->user()->reset_hash)->withCookies();
         }
 
+        // Mencari role pengguna dari database
+    $db = \Config\Database::connect();
+    $builder = $db->table('users');
+    $builder->select('users.*, auth_groups.name as role_name'); // Menambahkan alias role_name
+    $builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+    $builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+    $builder->where('users.id', $this->auth->user()->id); // Pastikan hanya mengambil data untuk pengguna yang sedang login
+    $query = $builder->get();
+    $result = $query->getRowArray(); // Mengambil hasil sebagai array
+
+    // Menentukan role dan mengarahkan sesuai dengan role
+    if ($result) {
+        $userRole = $result['role_name']; // Mengambil role pengguna
+
+        if ($userRole === 'penghuni') {
+            return redirect()->to('/dashboard_penghuni')->withCookies()->with('message', lang('Auth.loginSuccess'));
+        } elseif ($userRole === 'pemilik') {
+            return redirect()->to('/dashboard_pemilik')->withCookies()->with('message', lang('Auth.loginSuccess'));
+        }
+    }
+
         $redirectURL = session('redirect_url') ?? site_url('/');
         unset($_SESSION['redirect_url']);
 
@@ -185,6 +206,7 @@ class AuthController extends Controller
         if (! $users->save($user)) {
             return redirect()->back()->withInput()->with('errors', $users->errors());
         }
+        
 
         if ($this->config->requireActivation !== null) {
             $activator = service('activator');

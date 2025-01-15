@@ -73,7 +73,7 @@ class Filters extends BaseFilters
     public array $globals = [
         'before' => [
             'honeypot',
-            'login',
+            
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
@@ -108,5 +108,30 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+    public array $filters = [
+        'role' => [
+            'before' => [
+                '/dashboard_pemilik', 
+                '/manajemen_kamar', 
+                'akun_pemilik', 
+                'ubah-password', 
+                '/konfirmasi_pembayaran',
+                '/laporan_keuangan',
+                '/list-kamar', 
+                'masuk-kamar/(:any)', 
+                '/pembayaran', 
+                // Tambahkan URL lain yang memerlukan autentikasi
+            ],
+        ],
+        'login' => [
+            'before' => [
+                // Daftar URL yang memerlukan login, jika tidak terautentikasi
+                '/dashboard_penghuni',
+                '/list-kamar', 
+                'masuk-kamar/(:any)', 
+                '/pembayaran',
+                // Tambahkan URL lain yang memerlukan autentikasi
+            ],
+        ],
+    ];
 }

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\User;
 
-class AkunPemilik extends BaseController
+class AkunPenghuni extends BaseController
 {
     protected $users;
 
@@ -21,8 +21,8 @@ class AkunPemilik extends BaseController
         ];
 
         // Load view dengan data
-        echo view('template/headerPemilik', $data);
-        echo view('akun_pemilik', $data);
+        echo view('template/headerPenghuni', $data);
+        echo view('akun_penghuni', $data);
         echo view('template/footer');
     }
     

@@ -24,18 +24,29 @@ class DashboardPemilik extends BaseController
 
         // Mengambil jumlah pembayaran yang belum dikonfirmasi
         $notifikasiPembayaran = $buktiBayar
-            ->where('status', 'tertunda')
+            ->where('status', '0')
             ->countAllResults();
+            
+        $db = \Config\Database::connect();
+        $builder = $db->table('users');
+        $builder->select('users.*, users.id as userid');
+        $builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+        $builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+        $builder->where(['name' => 'penghuni']);
+        $query = $builder->get();
+        $result = $query->getResultArray(); 
+        
+
 
         $data = [
-            'totalPenghuni' => $user->where('id')->countAllResults(),
-            'kamarTersedia' => $kamar->where('status', 'tersedia')->countAllResults(),
-            'pembayaranTertunda' => $buktiBayar->where('status', 'tertunda')->countAllResults(),
+            'totalPenghuni' => $result,
+            'pembayaranTertunda' => $buktiBayar->where('status', '0')->countAllResults(),
 
-            'penghasilanTahun' => $penghasilanTahun ?? 0,
             
+            'penghasilanTahun' => $penghasilanTahun ?? 0,
+
             'penghuni' => $user->where('nama')->countAllResults(),
-            'kamarTerpakai' => $kamar->where('status', 'terpakai')->findAll(),
+            'kamarTerpakai' => $kamar->where('status', '1')->findAll(),
             'notifikasiPembayaran' => $notifikasiPembayaran, // Kirim notifikasi ke view
         ];
 

@@ -15,8 +15,12 @@
             <img src="<?= base_url('images/logo.png'); ?>" alt="Kost Tarka Logo">
         </div>
         <nav>
-            <a href="/login">Login</a>
-            <a href="/register">Sign Up</a>
+            <?php if(logged_in()){?>
+                <a href="/logout">Logout</a>
+            <?php }else{ ?>
+                <a href="/login">Login</a>
+                <a href="/register">Sign Up</a>
+            <?php } ?>
         </nav>
     </header>
 

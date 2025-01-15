@@ -91,7 +91,7 @@
                         <i class="fa fa-user fa-lg"></i> <!-- Ikon Akun -->
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?=base_url('/akun_pemilik')?>">Pengaturan Akun</a></li>
+                        <li><a class="dropdown-item" href="<?=base_url('/akun_penghuni')?>">Pengaturan Akun</a></li>
                         <li><a class="dropdown-item" href="<?=base_url('/logout')?>">Logout</a></li>
                     </ul>
                 </li>

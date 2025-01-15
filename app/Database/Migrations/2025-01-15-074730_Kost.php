@@ -73,6 +73,10 @@ class CreateKosTables extends Migration
                 'type'       => 'TEXT',
                 'null'       => true,
             ],
+            'id_user' => [
+                'type'       => 'TEXT',
+                'null'       => true,
+            ],
         ]);
         $this->forge->addKey('id_kamar', true);
         $this->forge->createTable('kamar');

@@ -31,16 +31,16 @@
                                 <td><?= $no++; ?></td>
                                 <td><?= $kamar['nama_kamar']; ?></td>
                                 <td>
-                                    <?php if ($kamar['status'] === '1'): ?>
+                                    <?php if ($kamar['status_kamar'] === '1'): ?>
                                         <span class="badge bg-success">Terpakai</span> 
                                     <?php else: ?>
                                         <span class="badge bg-danger">Tersedia</span> 
                                     <?php endif; ?>
                                 </td>
-                                <td><?= isset($kamar['penghuni']) ? $kamar['penghuni'] : 'Tidak ada'; ?></td>
+                                <td><?= isset($kamar['nama']) ? $kamar['nama'] : 'Tidak ada'; ?></td>
                                 <td>
                                     <a href="<?= base_url('detail-kamar/' . $kamar['id_kamar']); ?>" class="btn btn-primary btn-sm">Detail</a>
-                                    <?php if ($kamar['status'] === '0'): ?>
+                                    <?php if ($kamar['status_kamar'] === '0'): ?>
                                         <a href="<?= base_url('masuk-kamar/' . $kamar['id_kamar']); ?>" class="btn btn-success btn-sm">Masuk ke Kamar</a>
                                     <?php endif; ?>
                                 </td>
