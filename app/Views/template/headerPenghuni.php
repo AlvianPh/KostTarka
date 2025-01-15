@@ -31,15 +31,15 @@
             color: white;
         }
 
-        footer {
-            margin-top: 30px;
-        }
 
         .footer-icon {
             transition: transform 0.3s ease, color 0.3s ease;
             font-size: 1.5rem; /* Ukuran ikon yang lebih besar */
         }
 
+        footer {
+            width: 100%;
+        }
         .footer-logo img {
             max-width: 150px;
         }
@@ -77,16 +77,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('/dashboard_pemilik')?>">Home</a>
+                    <a class="nav-link" href="<?=base_url('/dashboard_penghuni')?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('/manajemen_kamar')?>">Manajemen</a>
+                    <a class="nav-link" href="<?=base_url('/list-kamar')?>">List Kamar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('/konfirmasi_pembayaran')?>">Pembayaran</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('/laporan_keuangan')?>">Laporan</a>
+                    <a class="nav-link" href="<?=base_url('pembayaran')?>">Pembayaran</a>
                 </li>
                 <!-- User Dropdown -->
                 <li class="nav-item dropdown">

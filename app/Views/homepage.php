@@ -64,7 +64,7 @@
                 <p>Discover the best way to manage your boarding house effortlessly. Get insights, reminders, and complete control at your fingertips!</p>
 
                 <!-- template saja,get started nya nanti ganti ke login -->
-                <a href="<?= base_url('penghuni-kos') ?>" class="btn">Get Started</a>
+                <a href="<?= base_url('dashboard_penghuni') ?>" class="btn">Get Started</a>
 
 
             </div>

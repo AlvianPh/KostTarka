@@ -9,7 +9,7 @@ class BuktiBayar extends Model
     protected $table = 'bukti';
     protected $primaryKey = 'id_bukti';
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['jumlah', 'tanggal', 'status', 'nama_penghuni', 'foto_bukti',];
+    protected $allowedFields = ['nama_kamar','jumlah', 'tanggal', 'status', 'nama_penghuni', 'foto_bukti'];
 
 
     public function rules()
@@ -33,6 +33,10 @@ class BuktiBayar extends Model
             ],
             'foto_bukti' => [
                 'label' => 'foto_bukti',
+                'rules' => 'trim|required'
+            ],
+            'nama_kamar' => [
+                'label' => 'nama_kamar',
                 'rules' => 'trim|required'
             ],
         ];

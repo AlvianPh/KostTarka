@@ -58,8 +58,8 @@
             <label for="status">Status</label>
             <select class="form-control" id="status" name="status" required>
                 <option value="">Pilih Status</option>
-                <option value="1" <?= old('status', $kamar['status']) == '1' ? 'selected' : ''; ?>>Aktif</option>
-                <option value="0" <?= old('status', $kamar['status']) == '0' ? 'selected' : ''; ?>>Tidak Aktif</option>
+                <option value="1" <?= old('status', $kamar['status']) == '1' ? 'selected' : ''; ?>>Berpenghuni</option>
+                <option value="0" <?= old('status', $kamar['status']) == '0' ? 'selected' : ''; ?>>Tidak Berpenghuni</option>
             </select>
             <div class="invalid-feedback">
                 <?= validation_show_error('status') ?>

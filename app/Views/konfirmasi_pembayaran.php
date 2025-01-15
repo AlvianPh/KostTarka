@@ -64,7 +64,7 @@
                             <td>
                                 <?php if (!empty($b['foto_bukti'])): ?>
                                     <a href="<?= base_url('bukti_pembayaran/' . $b['foto_bukti']); ?>" data-lightbox="bukti_pembayaran_<?= $b['id_bukti']; ?>" data-title="Foto Bukti Pembayaran">
-                                        <img src="<?= base_url('bukti_pembayaran/' . $b['foto_bukti']); ?>" alt="Foto Bukti" width="100" style="cursor: pointer;">
+                                        <img src="<?= base_url('uploads/bukti/' . $b['foto_bukti']); ?>" alt="Foto Bukti" width="100" style="cursor: pointer;">
                                     </a>
                                 <?php else: ?>
                                     <span class="text-muted">Tidak ada foto</span>

@@ -62,8 +62,6 @@
     }, 5000); // 5 detik
 </script>
 
-
-
         <h1 class="text-center mb-5 mt-4" >Manajemen Kamar</h1>
 
         <div class="row row-cols-1 row-cols-md-3 g-4 ms-4 me-4">

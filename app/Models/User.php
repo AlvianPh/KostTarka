@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class User extends Model
 {
-    protected $table = 'user';
-    protected $primaryKey = 'id_user';
-    protected $allowedFields = ['nama', 'email', 'password', 'no_hp', 'role'];
+    protected $table = 'users';
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['nama', 'email', 'username', 'password_hash', 'no_telpon'];
 
 
     public function rules()
@@ -22,28 +22,24 @@ class User extends Model
                 'label' => 'email',
                 'rules' => 'trim|required'
             ],
-            'password' => [
-                'label' => 'password',
+            'password_hash' => [
+                'label' => 'password_hash',
                 'rules' => 'trim|required'
             ],
-            'no_hp' => [
-                'label' => 'no_hp',
+            'no_telpon' => [
+                'label' => 'no_telpon',
                 'rules' => 'trim|required'
             ],
-            'role' => [
-                'label' => 'role',
-                'rules' => 'trim|required'
-            ]
         ];
     }
 
     public function getAll()
     {
-        return $this->orderBy('id_user', 'ASC')->findAll();
+        return $this->orderBy('id', 'ASC')->findAll();
     }
 
     public function getById($id)
     {
-        return $this->where(['id_user' => $id])->first();
+        return $this->where(['id' => $id])->first();
     }
 }
