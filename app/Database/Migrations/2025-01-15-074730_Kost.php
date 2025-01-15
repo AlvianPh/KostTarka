@@ -74,8 +74,11 @@ class CreateKosTables extends Migration
                 'null'       => true,
             ],
             'id_user' => [
-                'type'       => 'TEXT',
-                'null'       => true,
+                'type'       => 'INT',
+                'constraint' => 11,
+                'unsigned'   => true,
+                'null'       => false,
+                'default'    => 1,
             ],
         ]);
         $this->forge->addKey('id_kamar', true);
