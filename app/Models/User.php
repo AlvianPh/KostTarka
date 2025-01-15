@@ -10,7 +10,6 @@ class User extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['nama', 'email', 'username', 'password_hash', 'no_telpon'];
 
-
     public function rules()
     {
         return [

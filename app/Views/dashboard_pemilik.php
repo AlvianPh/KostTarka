@@ -11,8 +11,8 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled text-start">
-                        <?php if (!empty($penghuni)): ?>
-                            <?php foreach ($penghuni as $key => $p): ?>
+                        <?php if (!empty($totalPenghuni)): ?>
+                            <?php foreach ($totalPenghuni as $key => $p): ?>
                                 <li><?= ($key + 1) . '. ' . htmlspecialchars($p['nama']); ?></li>
                             <?php endforeach; ?>
                         <?php else: ?>

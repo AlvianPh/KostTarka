@@ -16,7 +16,12 @@ $routes->get('/dashboard_penghuni', 'DashboardPenghuni::index', ['filter' => 'ro
 
 $routes->get('/manajemen_kamar', 'ManajemenKamar::index', ['filter' => 'role:pemilik']);
 
-$routes->get('/akun_pemilik', 'AkunPemilik::index', ['filter' => 'role:pemilik']);
+
+$routes->get('akun_pemilik', 'AkunPemilik::index', ['filter' => 'role:pemilik']);
+$routes->get('ubah-password', 'AkunPemilik::edit', ['filter' => 'role:pemilik']);
+
+$routes->get('akun_penghuni', 'AkunPenghuni::index', ['filter' => 'role:penghuni']);
+$routes->get('ubah-password', 'AkunPenghuni::edit', ['filter' => 'role:penghuni']);
 
 
 // CRUD Kamar
@@ -38,9 +43,9 @@ $routes->get('laporan_keuangan/cetakPdf', 'LaporanKeuangan::cetakPdf', ['filter'
 
 $routes->get('/list-kamar', 'ListKamar::index',['filter' => 'role:penghuni']);
 
-$routes->get('masuk-kamar/(:any)', 'ManajemenKamar::masukKamar/$1', ['filter' => 'role:penghuni']);
-$routes->post('/masuk_kamar/(:any)', 'ManajemenKamar::masukKamar/$1', ['filter' => 'role:penghuni']);
-$routes->get('/detail-kamar/(:any)', 'ManajemenKamar::detailKamar/$1', ['filter' => 'role:penghuni']);
+$routes->get('masuk-kamar/(:any)', 'ListKamar::masukKamar/$1', ['filter' => 'role:penghuni']);
+$routes->post('/masuk_kamar/(:any)', 'ListKamar::masukKamar/$1', ['filter' => 'role:penghuni']);
+$routes->get('/detail-kamar/(:any)', 'ListKamar::detailKamar/$1', ['filter' => 'role:penghuni']);
 
 $routes->get('/pembayaran', 'Pembayaran::index', ['filter' => 'role:penghuni']);
 $routes->get('pembayaran', 'Pembayaran::index', ['filter' => 'role:penghuni']);
