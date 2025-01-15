@@ -52,7 +52,7 @@ class Pembayaran extends BaseController
             }
 
             // Ambil data dari input form
-            $nomerKamar = $this->request->getPost('nomor_kamar');
+            $nomerKamar = $this->request->getVar('nomer_kamar');
             $namaPenghuni = $this->request->getPost('nama_penghuni');
             $jumlah = $this->request->getPost('jumlah');
             $tanggal = date('Y-m-d'); // Tanggal sekarang dari server

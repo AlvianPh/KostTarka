@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controllers\\AkunPemilik' => $baseDir . '/app/Controllers/AkunPemilik.php',
+    'App\\Controllers\\AkunPenghuni' => $baseDir . '/app/Controllers/AkunPenghuni.php',
     'App\\Controllers\\BaseController' => $baseDir . '/app/Controllers/BaseController.php',
     'App\\Controllers\\DashboardPemilik' => $baseDir . '/app/Controllers/DashboardPemilik.php',
     'App\\Controllers\\DashboardPenghuni' => $baseDir . '/app/Controllers/DashboardPenghuni.php',
@@ -17,6 +18,7 @@ return array(
     'App\\Controllers\\ListKamar' => $baseDir . '/app/Controllers/ListKamar.php',
     'App\\Controllers\\ManajemenKamar' => $baseDir . '/app/Controllers/ManajemenKamar.php',
     'App\\Controllers\\Pembayaran' => $baseDir . '/app/Controllers/Pembayaran.php',
+    'App\\Database\\Seeds\\AuthGroupsSeeder' => $baseDir . '/app/Database/Seeds/AuthGroupsSeeder.php',
     'App\\Models\\BuktiBayar' => $baseDir . '/app/Models/BuktiBayar.php',
     'App\\Models\\Kamar' => $baseDir . '/app/Models/Kamar.php',
     'App\\Models\\Sewa' => $baseDir . '/app/Models/Sewa.php',

@@ -22,7 +22,7 @@ class LaporanKeuangan extends BaseController
             'title' => 'Laporan',
         ];
 
-        $data['bukti_riwayat'] = $this->buktiBayarModel->where('status', 1)->findAll();
+        $data['bukti_riwayat'] = $this->buktiBayarModel->getPembayaranSuccess();
 
         echo view('template/headerPemilik', $data);
         echo view('laporan', $data); 

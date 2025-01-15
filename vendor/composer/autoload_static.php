@@ -137,6 +137,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
 
     public static $classMap = array (
         'App\\Controllers\\AkunPemilik' => __DIR__ . '/../..' . '/app/Controllers/AkunPemilik.php',
+        'App\\Controllers\\AkunPenghuni' => __DIR__ . '/../..' . '/app/Controllers/AkunPenghuni.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
         'App\\Controllers\\DashboardPemilik' => __DIR__ . '/../..' . '/app/Controllers/DashboardPemilik.php',
         'App\\Controllers\\DashboardPenghuni' => __DIR__ . '/../..' . '/app/Controllers/DashboardPenghuni.php',
@@ -147,6 +148,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'App\\Controllers\\ListKamar' => __DIR__ . '/../..' . '/app/Controllers/ListKamar.php',
         'App\\Controllers\\ManajemenKamar' => __DIR__ . '/../..' . '/app/Controllers/ManajemenKamar.php',
         'App\\Controllers\\Pembayaran' => __DIR__ . '/../..' . '/app/Controllers/Pembayaran.php',
+        'App\\Database\\Seeds\\AuthGroupsSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/AuthGroupsSeeder.php',
         'App\\Models\\BuktiBayar' => __DIR__ . '/../..' . '/app/Models/BuktiBayar.php',
         'App\\Models\\Kamar' => __DIR__ . '/../..' . '/app/Models/Kamar.php',
         'App\\Models\\Sewa' => __DIR__ . '/../..' . '/app/Models/Sewa.php',

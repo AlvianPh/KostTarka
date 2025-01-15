@@ -17,10 +17,21 @@ class KonfirmasiPembayaran extends BaseController
     public function index()
     {
         // Ambil data bukti pembayaran yang belum terkonfirmasi (status = 0)
-        $data['bukti_pending'] = $this->buktiBayarModel->where('status', 0)->findAll();
+        $data['bukti_pending'] = $this->buktiBayarModel->getPembayaran();
+        // return var_dump($data);
+
+        // $db = \Config\Database::connect();
+        // $builder = $db->table('users');
+        // $builder->select('users.*, users.id as userid');
+        // $builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+        // $builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+        // $builder->where(['name' => 'penghuni']);
+        // $query = $builder->get();
+        // $result = $query->getResultArray();
 
         // Ambil data riwayat transaksi yang sudah terkonfirmasi (status = 1)
-        $data['bukti_riwayat'] = $this->buktiBayarModel->where('status', 1)->findAll();
+        // $data['bukti_riwayat'] = $this->buktiBayarModel->where('status', 1)
+        // ->join('kamar', 'bukti.id_kamar = kamar.id_kamar')->findAll();
 
         // Load views
         echo view('template/headerPemilik', $data);

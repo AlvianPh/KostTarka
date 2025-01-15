@@ -29,6 +29,7 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th>Nama Kamar</th>
                 <th>Nama Penghuni</th>
                 <th>Nominal Bayar</th>
                 <th>Tanggal</th>
@@ -40,6 +41,7 @@
                 <?php $i = 1; foreach ($dataLaporan as $laporan): ?>
                     <tr>
                         <td><?= $i++; ?></td>
+                        <td><?= $laporan['nama_kamar']; ?></td>
                         <td><?= $laporan['nama_penghuni']; ?></td>
                         <td>Rp. <?= number_format($laporan['jumlah'], 0, ',', '.'); ?></td>
                         <td><?= $laporan['tanggal']; ?></td>
@@ -48,7 +50,7 @@
                 <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="5" style="text-align: center;">Tidak ada data</td>
+                    <td colspan="6" style="text-align: center;">Tidak ada data</td>
                 </tr>
             <?php endif; ?>
         </tbody>

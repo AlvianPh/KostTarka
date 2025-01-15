@@ -46,14 +46,14 @@
                     <?php $no = 1; foreach ($bukti_riwayat as $b): ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $b['id_bukti']; ?></td>
-                            <td><?= $b['nama_penghuni'] ?? 'Tidak Diketahui'; ?></td>
+                            <td><?= $b['nama_kamar']; ?></td>
+                            <td><?= $b['nama_penghuni']; ?></td>
                             <td>Rp <?= number_format($b['jumlah'], 0, ',', '.'); ?></td>
                             <td><span class="badge bg-success">Telah Disetujui</span></td>
                             <td>
                                 <?php if (!empty($b['foto_bukti'])): ?>
                                     <a href="<?= base_url('bukti_pembayaran/' . $b['foto_bukti']); ?>" data-lightbox="bukti_pembayaran_<?= $b['id_bukti']; ?>" data-title="Foto Bukti Pembayaran">
-                                        <img src="<?= base_url('bukti_pembayaran/' . $b['foto_bukti']); ?>" alt="Foto Bukti" width="100" style="cursor: pointer;">
+                                        <img src="<?= base_url('uploads/bukti/' . $b['foto_bukti']); ?>" alt="Foto Bukti" width="100" style="cursor: pointer;">
                                     </a>
                                 <?php else: ?>
                                     <span class="text-muted">Tidak ada foto</span>
